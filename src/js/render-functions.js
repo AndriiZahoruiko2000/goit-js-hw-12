@@ -5,6 +5,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const loader = document.querySelector('.loader');
 const list = document.querySelector('.gallery');
+export const loadBtn = document.querySelector('.js-loader-btn');
 
 let lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
@@ -56,9 +57,17 @@ function createTemplateImages(images) {
 
 export function createGallery(images) {
   const markup = createTemplateImages(images);
-  list.innerHTML = markup;
+  list.insertAdjacentHTML('beforeend', markup);
   lightbox.refresh();
 }
 export function clearGallery() {
   list.innerHTML = '';
+}
+
+export function showLoaderBtn() {
+  loadBtn.classList.remove('hidden');
+}
+
+export function hideLoaderBtn() {
+  loadBtn.classList.add('hidden');
 }

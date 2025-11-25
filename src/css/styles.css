@@ -54,9 +54,9 @@ img {
   padding-right: 15px;
 }
 
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+section {
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 input {
@@ -105,6 +105,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  margin-bottom: 32px;
 }
 
 .gallery-item {
@@ -175,6 +176,25 @@ input {
   100% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
   }
+}
+
+.loader-btn {
+  display: block;
+  margin: 0 auto;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  border-radius: 8px;
+  padding-block: 8px;
+  padding-inline: 16px;
+  width: 125px;
+  height: 40px;
+
+  background: #4e75ff;
 }
 
 .hidden {
